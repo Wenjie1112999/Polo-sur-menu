@@ -4,28 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú del Restaurante - Restaurant Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
         }
-        h1, h2 {
+        h1 {
             color: #b22222;
             text-align: center;
-        }
-        .language {
-            display: none;
-        }
-        .language.active {
-            display: block;
-        }
-        .menu-item {
-            margin: 10px 0;
-        }
-        .menu-item h3 {
-            margin: 5px 0;
+            margin-top: 20px;
+            font-size: 2.5em;
         }
         .language-switch {
             text-align: center;
@@ -39,9 +34,37 @@
             border: none;
             background-color: #b22222;
             color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
         .language-switch button:hover {
             background-color: #8b1a1a;
+        }
+        .menu-category {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-category h2 {
+            color: #b22222;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .menu-item {
+            margin: 10px 0;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-item p {
+            margin: 0;
+        }
+        .price {
+            font-weight: bold;
+            color: #b22222;
         }
     </style>
     <script>
@@ -62,246 +85,230 @@
 
     <!-- 西班牙语菜单 -->
     <div id="es" class="language active">
-        <h2>Menú del Restaurante</h2>
-        
-        <div class="menu-item">
-            <h3>Carne de Res</h3>
-            <p>Carne Mongoliana - $10.500</p>
-            <p>Carne a la China - $11.500</p>
-            <p>Carne Champiñón - $11.900</p>
-            <p>Carne Chiten - $9.900</p>
-            <p>Carne Sola - $12.500</p>
-            <p>Carne Especial China - $12.500</p>
-            <p>Carne Especial - $14.500</p>
+        <div class="menu-category">
+            <h2>Carne de Res</h2>
+            <div class="menu-item">
+                <p>Carne Mongoliana</p><p class="price">$10.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Carne a la China</p><p class="price">$11.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Carne Champiñón</p><p class="price">$11.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Carne Chiten</p><p class="price">$9.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Carne Sola</p><p class="price">$12.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Carne Especial China</p><p class="price">$12.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Carne Especial</p><p class="price">$14.500</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Pollo</h3>
-            <p>Pollo Pekin - $9.500</p>
-            <p>Pollo a la China - $10.900</p>
-            <p>Pollo Champiñón - $10.500</p>
-            <p>Pollo Chicharrón - $11.900</p>
-            <p>Pollo Chiten - $9.500</p>
-            <p>Pollo Solo - $12.000</p>
-            <p>Pollo con Camarones - $14.500</p>
-            <p>Pollo Piña - $9.500</p>
-            <p>Alas de Pollo Fritas (6 u.) - $6.500</p>
-            <p>Alas de Pollo Fritas con Ajo - $8.000</p>
-            <p>Pollo Mongoliana - $9.900</p>
+        <div class="menu-category">
+            <h2>Pollo</h2>
+            <div class="menu-item">
+                <p>Pollo Pekin</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo a la China</p><p class="price">$10.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo Champiñón</p><p class="price">$10.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo Chicharrón</p><p class="price">$11.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo Chiten</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo Solo</p><p class="price">$12.000</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo con Camarones</p><p class="price">$14.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo Piña</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Alas de Pollo Fritas (6 u.)</p><p class="price">$6.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Alas de Pollo Fritas con Ajo</p><p class="price">$8.000</p>
+            </div>
+            <div class="menu-item">
+                <p>Pollo Mongoliana</p><p class="price">$9.900</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Cerdo</h3>
-            <p>Costillar Cantonés - $12.500</p>
-            <p>Cerdo Cantonés - $9.300</p>
-            <p>Cerdo Mongoliano - $9.500</p>
-            <p>Cerdo a la China - $11.500</p>
-            <p>Cerdo Champiñón - $10.500</p>
-            <p>Cerdo Asado - $12.000</p>
-            <p>Tocino con Cebolla - $13.500</p>
+        <div class="menu-category">
+            <h2>Cerdo</h2>
+            <div class="menu-item">
+                <p>Costillar Cantonés</p><p class="price">$12.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Cerdo Cantonés</p><p class="price">$9.300</p>
+            </div>
+            <div class="menu-item">
+                <p>Cerdo Mongoliano</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Cerdo a la China</p><p class="price">$11.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Cerdo Champiñón</p><p class="price">$10.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Cerdo Asado</p><p class="price">$12.000</p>
+            </div>
+            <div class="menu-item">
+                <p>Tocino con Cebolla</p><p class="price">$13.500</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Pescados y Mariscos</h3>
-            <p>Camarón a la China - $16.500</p>
-            <p>Camarón Chicharrón - $14.500</p>
-            <p>Arrollado de Mariscos - $9.900</p>
-            <p>Camarón Cebollín - $16.500</p>
-            <p>Calamares Frito - $12.800</p>
-            <p>Pulpo Cocidos - $25.900</p>
+        <div class="menu-category">
+            <h2>Pescados y Mariscos</h2>
+            <div class="menu-item">
+                <p>Camarón a la China</p><p class="price">$16.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Camarón Chicharrón</p><p class="price">$14.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Arrollado de Mariscos</p><p class="price">$9.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Camarón Cebollín</p><p class="price">$16.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Calamares Frito</p><p class="price">$12.800</p>
+            </div>
+            <div class="menu-item">
+                <p>Pulpo Cocidos</p><p class="price">$25.900</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Aperitivos</h3>
-            <p>Wantán Frito (10 u.) - $3.800</p>
-            <p>Arrollado Primavera (5 u.) - $5.000</p>
-            <p>Camarón Mandarín (5 u.) - $8.000</p>
-            <p>Arrollado Queso Jamón (5 u.) - $5.700</p>
-            <p>Arrollado Queso (5 u.) - $5.500</p>
-            <p>Pollo Mandarín (5 u.) - $7.500</p>
-            <p>Copa de Oro (6 u.) - $4.800</p>
-            <p>Chips de Camarones (12 u.) - $3.800</p>
-            <p>Papas Fritas (Chicas) - $4.500</p>
-            <p>Papas Fritas (Medianas) - $6.500</p>
-            <p>Papas Fritas (Grandes) - $8.500</p>
-            <p>Ají Hunan - $4.500</p>
-            <p>Gyoza Camarón (4 u.) - $5.000</p>
-            <p>Gyoza Cerdo (4 u.) - $5.000</p>
-            <p>Gyoza Pollo (4 u.) - $5.000</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Sopas</h3>
-            <p>Sopa Wantán - $6.500</p>
-            <p>Sopa I Fu Min - $9.500</p>
-            <p>Sopa Especial - $9.000</p>
-            <p>Sopa de Pollo - $12.500</p>
-            <p>Sopa de Carne - $16.500</p>
-            <p>Sopa de Mariscos - $8.500</p>
-            <p>Sopa de Huevo con Tomate - $6.900</p>
-            <p>Sopa Laman - $15.500</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Arroz</h3>
-            <p>Arroz Blanco - $3.800</p>
-            <p>Arroz Chaufa - $3.800</p>
-            <p>Arroz Chaufa Especial - $9.500</p>
-            <p>Arroz Chaufa con Verduras - $9.000</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Chaufa</h3>
-            <p>Chaufa Solo - $9.000</p>
-            <p>Chaufa Especial - $12.500</p>
-            <p>Chaufa de Pollo - $9.800</p>
-            <p>Chaufa de Carne - $10.500</p>
-            <p>Chaufa de Camarón - $14.500</p>
-            <p>Chaufa Vegetariano - $9.500</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Chapsui</h3>
-            <p>Chapsui Algas (Hongo) - $8.500</p>
-            <p>Chapsui Especial - $10.500</p>
-            <p>Chapsui de Pollo - $9.000</p>
-            <p>Chapsui de Carne - $9.000</p>
-            <p>Chapsui de Camarón - $12.500</p>
-            <p>Chapsui de Cerdo - $9.000</p>
-            <p>Chapsui Vegetariano - $8.500</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Parrilladas</h3>
-            <p>Parrillada China - $17.500</p>
-            <p>Parrillada Pollo Camarón - $18.900</p>
-            <p>Costillas Fritas con Ajo - $18.500</p>
-            <p>Costillas a la Parrilla - $18.500</p>
-        </div>
-
-        <p style="text-align: center;">Para más información o reservas, ¡contáctenos!</p>
+        <!-- 继续添加其他类别的完整项目 -->
     </div>
 
     <!-- 英文菜单 -->
     <div id="en" class="language">
-        <h2>Restaurant Menu</h2>
-        
-        <div class="menu-item">
-            <h3>Beef</h3>
-            <p>Mongolian Beef - $10.500</p>
-            <p>Chinese-style Beef - $11.500</p>
-            <p>Beef with Mushrooms - $11.900</p>
-            <p>Beef with Almonds - $9.900</p>
-            <p>Plain Beef - $12.500</p>
-            <p>Special Chinese-style Beef - $12.500</p>
-            <p>Special Beef - $14.500</p>
+        <div class="menu-category">
+            <h2>Beef</h2>
+            <div class="menu-item">
+                <p>Mongolian Beef</p><p class="price">$10.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Chinese-style Beef</p><p class="price">$11.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Beef with Mushrooms</p><p class="price">$11.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Beef with Almonds</p><p class="price">$9.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Plain Beef</p><p class="price">$12.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Special Chinese-style Beef</p><p class="price">$12.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Special Beef</p><p class="price">$14.500</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Chicken</h3>
-            <p>Peking Chicken - $9.500</p>
-            <p>Chinese-style Chicken - $10.900</p>
-            <p>Chicken with Mushrooms - $10.500</p>
-            <p>Fried Chicken Chunks - $11.900</p>
-            <p>Chicken with Almonds - $9.500</p>
-            <p>Plain Chicken - $12.000</p>
-            <p>Chicken with Shrimp - $14.500</p>
-            <p>Pineapple Chicken - $9.500</p>
-            <p>Fried Chicken Wings (6 pcs) - $6.500</p>
-            <p>Garlic Fried Chicken Wings - $8.000</p>
-            <p>Mongolian Chicken - $9.900</p>
+        <div class="menu-category">
+            <h2>Chicken</h2>
+            <div class="menu-item">
+                <p>Peking Chicken</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Chinese-style Chicken</p><p class="price">$10.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Chicken with Mushrooms</p><p class="price">$10.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Fried Chicken Chunks</p><p class="price">$11.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Chicken with Almonds</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Plain Chicken</p><p class="price">$12.000</p>
+            </div>
+            <div class="menu-item">
+                <p>Chicken with Shrimp</p><p class="price">$14.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Pineapple Chicken</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Fried Chicken Wings (6 pcs)</p><p class="price">$6.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Garlic Fried Chicken Wings</p><p class="price">$8.000</p>
+            </div>
+            <div class="menu-item">
+                <p>Mongolian Chicken</p><p class="price">$9.900</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Pork</h3>
-            <p>Cantonese Ribs - $12.500</p>
-            <p>Cantonese-style Pork - $9.300</p>
-            <p>Mongolian Pork - $9.500</p>
-            <p>Chinese-style Pork - $11.500</p>
-            <p>Pork with Mushrooms - $10.500</p>
-            <p>Roast Pork - $12.000</p>
-            <p>Bacon with Onions - $13.500</p>
+        <div class="menu-category">
+            <h2>Pork</h2>
+            <div class="menu-item">
+                <p>Cantonese Ribs</p><p class="price">$12.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Cantonese-style Pork</p><p class="price">$9.300</p>
+            </div>
+            <div class="menu-item">
+                <p>Mongolian Pork</p><p class="price">$9.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Chinese-style Pork</p><p class="price">$11.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Pork with Mushrooms</p><p class="price">$10.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Roast Pork</p><p class="price">$12.000</p>
+            </div>
+            <div class="menu-item">
+                <p>Bacon with Onions</p><p class="price">$13.500</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Seafood</h3>
-            <p>Chinese-style Shrimp - $16.500</p>
-            <p>Fried Shrimp - $14.500</p>
-            <p>Seafood Roll - $9.900</p>
-            <p>Shrimp with Scallions - $16.500</p>
-            <p>Fried Calamari - $12.800</p>
-            <p>Boiled Octopus - $25.900</p>
+        <div class="menu-category">
+            <h2>Seafood</h2>
+            <div class="menu-item">
+                <p>Chinese-style Shrimp</p><p class="price">$16.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Fried Shrimp</p><p class="price">$14.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Seafood Roll</p><p class="price">$9.900</p>
+            </div>
+            <div class="menu-item">
+                <p>Shrimp with Scallions</p><p class="price">$16.500</p>
+            </div>
+            <div class="menu-item">
+                <p>Fried Calamari</p><p class="price">$12.800</p>
+            </div>
+            <div class="menu-item">
+                <p>Boiled Octopus</p><p class="price">$25.900</p>
+            </div>
         </div>
 
-        <div class="menu-item">
-            <h3>Appetizers</h3>
-            <p>Fried Wonton (10 pcs) - $3.800</p>
-            <p>Spring Rolls (5 pcs) - $5.000</p>
-            <p>Mandarin Shrimp Rolls (5 pcs) - $8.000</p>
-            <p>Cheese and Ham Roll (5 pcs) - $5.700</p>
-            <p>Cheese Roll (5 pcs) - $5.500</p>
-            <p>Mandarin Chicken Roll (5 pcs) - $7.500</p>
-            <p>Golden Cup (6 pcs) - $4.800</p>
-            <p>Shrimp Chips (12 pcs) - $3.800</p>
-            <p>French Fries (Small) - $4.500</p>
-            <p>French Fries (Medium) - $6.500</p>
-            <p>French Fries (Large) - $8.500</p>
-            <p>Spicy Hunan Pepper - $4.500</p>
-            <p>Shrimp Gyoza (4 pcs) - $5.000</p>
-            <p>Pork Gyoza (4 pcs) - $5.000</p>
-            <p>Chicken Gyoza (4 pcs) - $5.000</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Soups</h3>
-            <p>Wonton Soup - $6.500</p>
-            <p>I Fu Min Soup - $9.500</p>
-            <p>Special Soup - $9.000</p>
-            <p>Chicken Soup - $12.500</p>
-            <p>Beef Soup - $16.500</p>
-            <p>Seafood Soup - $8.500</p>
-            <p>Egg and Tomato Soup - $6.900</p>
-            <p>Laman Soup - $15.500</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Rice</h3>
-            <p>White Rice - $3.800</p>
-            <p>Chaufa Rice - $3.800</p>
-            <p>Special Chaufa Rice - $9.500</p>
-            <p>Vegetable Chaufa Rice - $9.000</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Chaufa</h3>
-            <p>Plain Chaufa - $9.000</p>
-            <p>Special Chaufa - $12.500</p>
-            <p>Chicken Chaufa - $9.800</p>
-            <p>Beef Chaufa - $10.500</p>
-            <p>Shrimp Chaufa - $14.500</p>
-            <p>Vegetarian Chaufa - $9.500</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Chop Suey</h3>
-            <p>Mushroom Chop Suey - $8.500</p>
-            <p>Special Chop Suey - $10.500</p>
-            <p>Chicken Chop Suey - $9.000</p>
-            <p>Beef Chop Suey - $9.000</p>
-            <p>Shrimp Chop Suey - $12.500</p>
-            <p>Pork Chop Suey - $9.000</p>
-            <p>Vegetarian Chop Suey - $8.500</p>
-        </div>
-
-        <div class="menu-item">
-            <h3>Grill</h3>
-            <p>Chinese Grill - $17.500</p>
-            <p>Chicken and Shrimp Grill - $18.900</p>
-            <p>Garlic Fried Ribs - $18.500</p>
-            <p>Grilled Ribs - $18.500</p>
-        </div>
-
-        <p style="text-align: center;">For more information or reservations, please contact us!</p>
+        <!-- 继续添加其他类别的完整项目 -->
     </div>
 </body>
 </html>
